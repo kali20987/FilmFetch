@@ -2,8 +2,10 @@
 
 console.log('hello world');
 // Global Variables
-// var omdbKey = '2b24b8e5';
-// var tmdbKey = '2a7d4b5715a1c1e68c7c7be6c0b35221';
+var omdbKey = '2b24b8e5';
+var tmdbKey = '2a7d4b5715a1c1e68c7c7be6c0b35221';
+
+var movie;
 
 var resultsEl = document.getElementById('search-results');
 var resultDisplayEl = document.getElementById('result-display');
@@ -11,9 +13,24 @@ var resultDisplayEl = document.getElementById('result-display');
 // Pseudocode
 // ~~~~~~~~~~~~~~~~~~~~~~~
 // Api =
-// After search result input
-// Set search results as variable
 // Use variable as a query parameter in api key searches
+fetch('http://www.omdbapi.com/?apikey=' + omdbKey)
+    .then(function(response) {
+        // After search result input
+        return response.json();
+    })
+    .then(function(data) {
+        // Set search results as variable
+        console.log(data);
+    });
+
+fetch('https://api.themoviedb.org/3/movie/550?api_key=' + tmdbKey + '&language=en-US')
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        console.log(data);
+    });
 
 // Search results =
 // call data from api keys
