@@ -21,11 +21,18 @@ var resultDisplayEl = document.getElementById('result-display');
 function renderCards() {
     for(var i = 0; i < 5; i++) {
         var resultCard = document.createElement('div');
-        resultCard.classList.add('card', 'col-3', 'm-1');
+        resultCard.classList.add('card', 'col-2', 'm-1', 'mx-4');
         // add information to cards
+        var moviePoster = document.createElement('img');
+        moviePoster.classList.add('col');
+        moviePoster.setAttribute('alt', 'Movie Poster');
+        moviePoster.setAttribute('src', '');
+        
         var movieTitle = document.createElement('h3');
+        movieTitle.classList.add('col');
         movieTitle.textContent = 'A movie';
         // append cards to section id="search-results"
+        resultCard.appendChild(moviePoster);
         resultCard.appendChild(movieTitle);
         resultDisplayEl.appendChild(resultCard)
     }
