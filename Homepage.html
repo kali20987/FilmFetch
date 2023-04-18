@@ -23,10 +23,14 @@
     <!-- This is the navbar using bootstrap -->
 
     <nav class="navbar navbar-light bg-dark justify-content-between">
+      <div class="row">
+
+
+      
           <!-- This is the button for dropdown menu  -->
 
-          <div class="dropdown">
-            <button class="dropbtn">Dropdown</button>
+          <div class="dropdown col-1">
+            <button class="dropbtn">Menu</button>
             <div class="dropdown-content">
               <a href="#"> Home </a>
               <a href="#"> About us </a>
@@ -37,17 +41,16 @@
   
             </div>
           </div>
-       
-        <!--  onkey up was whatever the user types in we store in a variable letter by letter-->
-
+       <div class="col-3">
         <input
           id="searchMovies"
           class="form-control mr-sm-2" 
           type="search"
           placeholder="Search"
           aria-label="Search"
-          onkeyup="search_movies()"
         />
+      </div>
+
 
         <button
           id="submit"
@@ -56,15 +59,29 @@
           onclick="handleSubmit()"
         >
           Search for Movies
+          
         </button>
       </form>
+    </div>
     </nav>
   </head>
 
   <body>
+
     <!-- adding the Js and and jquery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
     <script src="./Assets/Script.js"></script>
+
+
+    
+      <footer >
+
+        <p>Hey! You reached the bottom!!</p>
+
+      </footer>
+
   </body>
+
+
 </html>
