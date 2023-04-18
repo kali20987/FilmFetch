@@ -23,7 +23,7 @@
     <!-- This is the navbar using bootstrap -->
 
     <nav class="navbar navbar-light bg-dark justify-content-between">
-      <div class="row">
+      <div class="row col-12 container">
 
 
       
@@ -36,11 +36,14 @@
               <a href="#"> About us </a>
               <a href="#"> Action </a>
               <a href="#"> Comedy </a>
-              <a href="#"> Adventure </a>
+              <a href="#"> Adventure </a>z
               <a href="#"> Anime </a>
   
             </div>
           </div>
+
+          <div class="col-5"></div>
+
        <div class="col-3">
         <input
           id="searchMovies"
@@ -50,23 +53,22 @@
           aria-label="Search"
         />
       </div>
-
-
+      
+<div class="col-3 searchButton">
         <button
           id="submit"
           class="btn btn-outline-success my-2 my-sm-0"
           type="button"
-          onclick="handleSubmit()"
+          onclick="handleSubmit()";
         >
           Search for Movies
           
-        </button>
+        </button></div>
       </form>
     </div>
     </nav>
   </head>
 
-  <body>
 
     <!-- adding the Js and and jquery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
