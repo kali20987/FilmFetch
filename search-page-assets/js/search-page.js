@@ -5,26 +5,24 @@ console.log('hello world');
 var omdbKey = '2b24b8e5';
 var tmdbKey = '2a7d4b5715a1c1e68c7c7be6c0b35221';
 
-var movie;
-
 var resultsEl = document.getElementById('search-results');
 var resultDisplayEl = document.getElementById('result-display');
+
+var genreInputs = [];
 
 // Pseudocode
 // ~~~~~~~~~~~~~~~~~~~~~~~
 // Api =
 // Use variable as a query parameter in api key searches
-fetch('http://www.omdbapi.com/?apikey=' + omdbKey)
+fetch('http://www.omdbapi.com/?apikey=' + omdbKey + '&page=10')
     .then(function(response) {
-        // After search result input
         return response.json();
     })
     .then(function(data) {
-        // Set search results as variable
         console.log(data);
     });
 
-fetch('https://api.themoviedb.org/3/movie/550?api_key=' + tmdbKey + '&language=en-US')
+fetch('https://api.themoviedb.org/3/discover/movie?api_key=' + tmdbKey + '&language=en-US&include_adult=false&include_video=false&page=1&with_genres=' + genreInputs )
     .then(function(response) {
         return response.json();
     })
