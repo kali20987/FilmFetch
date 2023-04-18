@@ -23,7 +23,7 @@
     <!-- This is the navbar using bootstrap -->
 
     <nav class="navbar navbar-light bg-dark justify-content-between">
-      <div class="row">
+      <div class="row col-12 container">
 
 
       
@@ -41,6 +41,9 @@
   
             </div>
           </div>
+
+          <div class="col-5"></div>
+
        <div class="col-3">
         <input
           id="searchMovies"
@@ -50,17 +53,17 @@
           aria-label="Search"
         />
       </div>
-
-
+      
+<div class="col-3 searchButton">
         <button
           id="submit"
           class="btn btn-outline-success my-2 my-sm-0"
           type="button"
-          onclick="handleSubmit()"
+          onclick="handleSubmit()";
         >
           Search for Movies
           
-        </button>
+        </button></div>
       </form>
     </div>
     </nav>
