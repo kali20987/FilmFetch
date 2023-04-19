@@ -9,7 +9,6 @@ var resultDisplayEl = document.getElementById('result-display');
 var firstBtn = document.getElementById('frstBtn');
 var prevBtn = document.getElementById('prevBtn');
 var nextBtn = document.getElementById('nextBtn');
-var lastBtn = document.getElementById('lastBtn');
 
 var pageNmbr = 1;
 
