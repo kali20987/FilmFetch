@@ -33,6 +33,8 @@ var pageNmbr = 1;
 // {id: 10752, name: 'War'}
 // {id: 10770, name: 'TV Movie'}
 var genreInputs = [];
+var releaseDate;
+var voteAverage;
 
 // Pseudocode
 // ~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,7 +47,10 @@ var genreInputs = [];
 // create dynamic cards
 function renderCards(pageNmbr) {
     resultDisplayEl.innerHTML = '';
-    fetch('https://api.themoviedb.org/3/discover/movie?api_key=' + tmdbKey + '&language=en-US&include_adult=false&include_video=false&page=' + pageNmbr + '&with_genres=' + genreInputs )
+    if(pageNmbr > 500){
+        pageNmbr = 500;
+    };
+    fetch('https://api.themoviedb.org/3/discover/movie?api_key=' + tmdbKey + '&language=en-US&region=US&include_adult=false&include_video=false&page=' + pageNmbr + '&with_genres=' + genreInputs )
         .then(function(response) {
             return response.json();
         })
