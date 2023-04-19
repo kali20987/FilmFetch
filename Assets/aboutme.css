@@ -1,36 +1,51 @@
+/* Made the backround center for the pictures and about me to */
+.about {
+  color: white;
+  text-align: center;
+}
+html {
+  background: url(./empty-movie-theater-viewed-from-back-of-room.webp) no-repeat
+    center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 /* about me section */
 .text {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   background-color: beige;
   width: 500px;
-  border: 15px solid red;
+  height: 313px;
+  border: 10px solid red;
   padding: 40px;
-  margin: 60px;
-  padding-right: 5%;
+  margin-top: 3%;
+  margin-left: 20%;
 }
 
 /* Misson statement section */
-.texts {
+/* .texts {
   position: absolute;
   left: 0;
   bottom: 0;
   background-color: beige;
   width: 500px;
-  border: 15px solid red;
+  border: 10px solid red;
   padding: 40px;
-  margin: 10px;
-}
-
-/* Theater Image */
-
-.movie {
-  position: absolute;
-  bottom: 0;
+  margin: 15px;
+} */
+.popcorn {
+  width: 30%;
+  height: 32%;
   right: 0;
-  margin: 5px;
+  position: absolute;
+  margin-right: 24%;
 }
+
+/* Nav bar information */
 
 .navbar-brand {
   text-align: center;
