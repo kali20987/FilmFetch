@@ -2,7 +2,7 @@
 *{}
 This is where we will add universal elements to make the websites the same format wise */
 .title {
-  color: white;
+  color: orange;
   font-size: 20px;
 }
 
@@ -13,7 +13,7 @@ This is where we will add universal elements to make the websites the same forma
   /* This is the menu button and it's properties */
 }
 .dropbtn {
-  background-color: #04aa6d;
+  background-color: orange;
   color: white;
   padding: 10px;
   font-size: 16px;
@@ -28,20 +28,20 @@ This is where we will add universal elements to make the websites the same forma
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: grey;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-content a {
-  color: red;
+  color: orange;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: orange;
   cursor: pointer;
 }
 
@@ -51,17 +51,19 @@ This is where we will add universal elements to make the websites the same forma
 }
 
 .dropdown:hover .dropbtn {
-  background-color: #3e8e41;
+  background-color: orange;
   cursor: pointer;
 }
 
 /*  This is the footer */
 footer {
   text-align: center;
-  padding: 12px;
+  padding: 5px;
   color: white;
   position: absolute;
   bottom: 0%;
   width: 100%;
-  background-color: #04aa6d;
+  background-color: grey;
+  font-style: italic;
+  font-size: large;
 }
