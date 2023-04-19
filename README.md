@@ -1,6 +1,15 @@
-# captain-planet
+# FilmFetch - Movie Info Library
 
-Source -
+## Description
+
+## Installation
+
+## Usage
+
+## License
+
+## Credits
+Image Sources -
 
 https://cloudfront-us-east-1.images.arcpublishing.com/gray/B6L4RX347ZDWDMFLGUTSKGLNM4.png
 
