@@ -1,26 +1,32 @@
 /* Moving the images below the nav bar! Popcorn below the Nav Bar and then on the right of it is about me. Then below is mission statement and on the right the theater image */
 
-.popcorn {
-  position: relative;
-}
+/* about me section */
 .text {
-  border-width: 3px;
-  border-color: #ff0000;
-  padding: 1px;
-}
-
-.text {
+  position: absolute;
+  right: 0;
   background-color: lightgrey;
   width: 300px;
   border: 15px solid red;
-  padding: 50px;
-  margin: 20px;
+  padding: 40px;
+  margin: 10px;
 }
 
+/* Misson statement section */
 .texts {
+  position: absolute;
+  left: 0;
+  bottom: 0;
   background-color: lightgrey;
   width: 300px;
   border: 15px solid red;
-  padding: 50px;
-  margin: 20px;
+  padding: 40px;
+  margin: 10px;
+}
+
+/* Popcorn Image */
+
+.movie {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
