@@ -23,7 +23,8 @@ function displayResults(movieId) {
     fetch('https://api.themoviedb.org/3/movie/' + movieId + '?api_key=' + tmdbKey + '&language=en-US&region=US&')
         .then(function(response) {
             return response.json();
-        }).then(function(data) {
+        })
+        .then(function(data) {
             console.log(data);
             titleEl.textContent = data.title;
             overviewEl.textContent = data.overview;
