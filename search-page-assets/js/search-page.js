@@ -7,6 +7,8 @@ var tmdbKey = '2a7d4b5715a1c1e68c7c7be6c0b35221';
 var resultsEl = document.getElementById('search-results');
 var resultDisplayEl = document.getElementById('result-display');
 
+//genres
+//
 var genreInputs = [];
 
 // Pseudocode
@@ -21,20 +23,19 @@ fetch('https://api.themoviedb.org/3/discover/movie?api_key=' + tmdbKey + '&langu
         console.log(data);
         for(var i = 0; i < data.results.length; i++) {
             var resultCard = document.createElement('div');
-            resultCard.classList.add('results-cards', 'card', 'col-2', 'm-1', 'mx-4');
+            resultCard.classList.add('results-cards', 'card', 'col-2', 'm-1', 'mx-4', 'p-2', 'bg-dark', 'text-light');
             // add information to cards
             var moviePoster = document.createElement('img');
-            moviePoster.classList.add();
             moviePoster.setAttribute('alt', 'Movie Poster');
             moviePoster.setAttribute('src', 'https://image.tmdb.org/t/p/w500' + data.results[i].poster_path);
             
             var movieTitle = document.createElement('h5');
-            movieTitle.classList.add();
+            movieTitle.classList.add('col', 'my-2');
             movieTitle.textContent = data.results[i].title;
 
             var movieRating = document.createElement('p');
-            movieRating.classList.add();
-            movieRating.textContent = data.results[i].vote_average + '⭐';
+            movieRating.classList.add('align-items-end', 'border-top');
+            movieRating.textContent = data.results[i].vote_average + ' ⭐';
             // append cards to section id="search-results"
             resultCard.appendChild(moviePoster);
             resultCard.appendChild(movieTitle);
