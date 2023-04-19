@@ -57,8 +57,9 @@ function renderCards(pageNmbr) {
         .then(function(data) {
             console.log(data);
             for(var i = 0; i < data.results.length; i++) {
-                var resultCard = document.createElement('div');
+                var resultCard = document.createElement('a');
                 resultCard.classList.add('results-cards', 'card', 'col-2', 'm-1', 'mx-4', 'p-2', 'bg-dark', 'text-light');
+                resultCard.setAttribute('href', '../movie-info-assets/movie-info.html?movie=' + data.results[i].id)
                 // add information to cards
                 var moviePoster = document.createElement('img');
                 moviePoster.setAttribute('alt', 'Movie Poster');

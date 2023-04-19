@@ -2,3 +2,8 @@
 .results-cards h5 {
     font-size: 18px;
 }
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
