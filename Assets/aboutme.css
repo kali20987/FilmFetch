@@ -1,0 +1,110 @@
+/* Made the backround center for the pictures and about me to */
+.about {
+  color: white;
+  text-align: center;
+}
+html {
+  background: url(./empty-movie-theater-viewed-from-back-of-room.webp) no-repeat
+    center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* about me section */
+.text {
+  text-align: center;
+  font-style: italic;
+  font-size: large;
+  border-radius: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: beige;
+  width: 450px;
+  height: 313px;
+  border: 10px solid red;
+  padding: 40px;
+  margin-top: 3%;
+  margin-left: 22.7%;
+}
+
+.popcorn {
+  border-radius: 15px;
+  width: 30%;
+  height: 31.5%;
+  right: 0;
+  position: absolute;
+  margin-right: 24%;
+}
+
+/* Nav bar information */
+
+.navbar-brand {
+  text-align: center;
+  color: white;
+
+  /* This is the menu button and it's properties */
+}
+.dropbtn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+  color: red;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+  cursor: pointer;
+}
+
+/*  This is the footer */
+footer {
+  text-align: center;
+  padding: 5px;
+  color: white;
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  background-color: #04aa6d;
+  font-style: italic;
+  font-size: large;
+}
+
+/* @media screen and (max-width: 992px) {
+  header {
+    background: #772014;
+  }
+} */
