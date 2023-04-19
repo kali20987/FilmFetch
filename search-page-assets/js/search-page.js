@@ -19,29 +19,35 @@ fetch('https://api.themoviedb.org/3/discover/movie?api_key=' + tmdbKey + '&langu
     })
     .then(function(data) {
         console.log(data);
+        for(var i = 0; i < data.results.length; i++) {
+            var resultCard = document.createElement('div');
+            resultCard.classList.add('results-cards', 'card', 'col-2', 'm-1', 'mx-4');
+            // add information to cards
+            var moviePoster = document.createElement('img');
+            moviePoster.classList.add();
+            moviePoster.setAttribute('alt', 'Movie Poster');
+            moviePoster.setAttribute('src', 'https://image.tmdb.org/t/p/w500' + data.results[i].poster_path);
+            
+            var movieTitle = document.createElement('h5');
+            movieTitle.classList.add();
+            movieTitle.textContent = data.results[i].title;
+
+            var movieRating = document.createElement('p');
+            movieRating.classList.add();
+            movieRating.textContent = data.results[i].vote_average + '⭐';
+            // append cards to section id="search-results"
+            resultCard.appendChild(moviePoster);
+            resultCard.appendChild(movieTitle);
+            resultCard.appendChild(movieRating);
+            resultDisplayEl.appendChild(resultCard)
+        }
     });
 
 // Search results =
 // call data from api keys
 // create dynamic cards
 function renderCards() {
-    for(var i = 0; i < 5; i++) {
-        var resultCard = document.createElement('div');
-        resultCard.classList.add('card', 'col-2', 'm-1', 'mx-4');
-        // add information to cards
-        var moviePoster = document.createElement('img');
-        moviePoster.classList.add('col');
-        moviePoster.setAttribute('alt', 'Movie Poster');
-        moviePoster.setAttribute('src', '');
-        
-        var movieTitle = document.createElement('h3');
-        movieTitle.classList.add('col');
-        movieTitle.textContent = 'A movie';
-        // append cards to section id="search-results"
-        resultCard.appendChild(moviePoster);
-        resultCard.appendChild(movieTitle);
-        resultDisplayEl.appendChild(resultCard)
-    }
+    
 };
 
 renderCards();
