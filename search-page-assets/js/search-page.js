@@ -109,3 +109,11 @@ nextBtn.addEventListener('click', function() {
 // Create checkbox aside for filters
 // Draw filter data as variable
 // Use filter variables in api key
+
+
+$(function () {
+    $('#datepicker').datepicker({
+      changeMonth: true,
+      changeYear: true,
+    });
+  });

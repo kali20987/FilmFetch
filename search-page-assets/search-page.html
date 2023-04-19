@@ -12,6 +12,12 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    <link
+    rel="stylesheet"
+    href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
     <link rel="stylesheet" href="./css/search-page.css"/>
 </head>
 <body>
@@ -24,22 +30,39 @@
         <div class="row m-2">
             <aside class="col-2 border border-5 border-dark rounded-start ">
                 <p>Filter Results:</p>
-                <input type="checkbox" id="alpha">A-Z</input>
+                <input type="checkbox" id="alpha">More popular</input>
                 <div></div>
-                <input type="checkbox" id="date">Release Date</input>
+                <input type="checkbox" id="date">Less popular</input>
                 <br>
                 <br>
                 <div class="critic-stars">
                     <p>Critic Reviews:</p>
-                    <input type="checkbox" id="one-star">⭐</input>
+                    <input type="checkbox" id="one-star">8+ ⭐</input>
                     <div></div>
-                    <input type="checkbox" id="'two-star">⭐⭐</input>
+                    <input type="checkbox" id="'two-star">6-8 ⭐</input>
                     <div></div>
-                    <input type="checkbox" id="three-star">⭐⭐⭐</input>
+                    <input type="checkbox" id="three-star">4-6 ⭐</input>
                     <div></div>
-                    <input type="checkbox" id="four-star">⭐⭐⭐⭐</input>
+                    <input type="checkbox" id="four-star">2-4 ⭐</input>
                     <div></div>
-                    <input type="checkbox" id="five-star">⭐⭐⭐⭐⭐</input>
+                    <input type="checkbox" id="five-star">0-2 ⭐</input>
+
+                    <div></div>
+                    <br>
+                    <div>Release date</div>
+                    <br>
+                    <script>
+                        $( function() {
+                          $( "#datepicker" ).datepicker();
+                        } );
+                        </script>
+                      </head>
+                      <body>
+                       
+                      <p>Date: <input type="text" id="datepicker"></p>
+                       
+                       
+                      </body>
             </div>
                 
             </aside>
@@ -62,6 +85,8 @@
     </main>
     <!-- footer needs to go here -->
     
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="./js/search-page.js"></script>
 </body>
 </html>
