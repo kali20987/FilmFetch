@@ -33,6 +33,8 @@ var pageNmbr = 1;
 // {id: 10752, name: 'War'}
 // {id: 10770, name: 'TV Movie'}
 var genreInputs = [];
+var releaseDate;
+var voteAverage;
 
 // Pseudocode
 // ~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,15 +47,19 @@ var genreInputs = [];
 // create dynamic cards
 function renderCards(pageNmbr) {
     resultDisplayEl.innerHTML = '';
-    fetch('https://api.themoviedb.org/3/discover/movie?api_key=' + tmdbKey + '&language=en-US&include_adult=false&include_video=false&page=' + pageNmbr + '&with_genres=' + genreInputs )
+    if(pageNmbr > 500){
+        pageNmbr = 500;
+    };
+    fetch('https://api.themoviedb.org/3/discover/movie?api_key=' + tmdbKey + '&language=en-US&region=US&include_adult=false&include_video=false&page=' + pageNmbr + '&with_genres=' + genreInputs )
         .then(function(response) {
             return response.json();
         })
         .then(function(data) {
             console.log(data);
             for(var i = 0; i < data.results.length; i++) {
-                var resultCard = document.createElement('div');
+                var resultCard = document.createElement('a');
                 resultCard.classList.add('results-cards', 'card', 'col-2', 'm-1', 'mx-4', 'p-2', 'bg-dark', 'text-light');
+                resultCard.setAttribute('href', '../movie-info-assets/movie-info.html?movie=' + data.results[i].id)
                 // add information to cards
                 var moviePoster = document.createElement('img');
                 moviePoster.setAttribute('alt', 'Movie Poster');
