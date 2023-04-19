@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./Assets/aboutme.css" />
     <title> About Us </title> 
 
     
@@ -14,8 +13,11 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-
     
+    <link rel="stylesheet" href="./assets/css/aboutme.css" />
+  </head>
+
+  <body background="./assets/images/empty-movie-theater-viewed-from-back-of-room.webp">
     <nav class="navbar navbar-light bg-dark justify-content-between">
       <div class="row col-12 container">
 
@@ -31,59 +33,54 @@
 
         <div class="col-3">
           <header class="about"> Title of Website </header>
-          </div>
+        </div>
 
-     <div class="col-3">
-      <input
-        id="searchMovies"
-        class="form-control mr-sm-2" 
-        type="search"
-        placeholder="Search"
-        aria-label="Search"
-      />
-    </div>
+        <div class="col-3">
+          <input
+            id="searchMovies"
+            class="form-control mr-sm-2" 
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+        </div>
     
-<div class="col-3 searchButton">
-      <button
-        id="submit"
-        class="btn btn-outline-success my-2 my-sm-0"
-        type="button"
-        onclick="handleSubmit()";
-      >
-        Search for Movies
-        
-      </button></div>
-    </form>
-  </div>
-  </nav>
+        <div class="col-3 searchButton">
+          <button
+          id="submit"
+          class="btn btn-outline-success my-2 my-sm-0"
+          type="button"
+          onclick="handleSubmit()";
+          >
+            Search for Movies
+          
+          </button>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <!-- Adding Image of Popcorn  -->
+      <img class="popcorn" src="./assets/images/popcorn.png" height="250" />
 
-  </head>
+      <!-- Class that contains the about me section -->
 
-  <body background="./Assets/empty-movie-theater-viewed-from-back-of-room.webp">
+      <div class="text">
 
-    <!-- Adding Image of Popcorn  -->
-    <img class="popcorn" src="./Assets/popcorn.png" height="250" />
+        <br>About Us<br/>
 
-    <!-- Class that contains the about me section -->
+        <br>This website is to showcase for users movie critics and their opinons on
+        current and popular movies that are released. This includes reviews, movie
+        critics opinon's recommenations for users,etc.</div></br>
 
-    <div class="text">
-
-      <br>About Us<br/>
-
-      <br>This website is to showcase for users movie critics and their opinons on
-      current and popular movies that are released. This includes reviews, movie
-      critics opinon's recommenations for users,etc.</div></br>
-
-    </div>
-
-    <!-- Mission Statement -->
+      </div>
+    </main>
+      <!-- Mission Statement -->
 
     <footer>
 
-    <p> Creators >> Alex S, Sal Monzoor, Josh Claxton, & Khadijah Ali</p>
+      <p> Creators >> Alex S, Sal Monzoor, Josh Claxton, & Khadijah Ali</p>
 
-  </footer>
-
+    </footer>
   </body>
 
 </html>
