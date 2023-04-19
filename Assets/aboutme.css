@@ -1,14 +1,14 @@
-/* Moving the images below the nav bar! Popcorn below the Nav Bar and then on the right of it is about me. Then below is mission statement and on the right the theater image */
-
 /* about me section */
 .text {
   position: absolute;
+  top: 0;
   right: 0;
-  background-color: lightgrey;
-  width: 300px;
+  background-color: beige;
+  width: 500px;
   border: 15px solid red;
   padding: 40px;
-  margin: 10px;
+  margin: 60px;
+  padding-right: 5%;
 }
 
 /* Misson statement section */
@@ -16,17 +16,78 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  background-color: lightgrey;
-  width: 300px;
+  background-color: beige;
+  width: 500px;
   border: 15px solid red;
   padding: 40px;
   margin: 10px;
 }
 
-/* Popcorn Image */
+/* Theater Image */
 
 .movie {
   position: absolute;
   bottom: 0;
   right: 0;
+  margin: 5px;
+}
+
+.navbar-brand {
+  text-align: center;
+  color: white;
+
+  /* This is the menu button and it's properties */
+}
+.dropbtn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+  color: red;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+  cursor: pointer;
+}
+
+/*  This is the footer */
+footer {
+  text-align: center;
+  padding: 5px;
+  color: white;
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  background-color: #04aa6d;
 }
