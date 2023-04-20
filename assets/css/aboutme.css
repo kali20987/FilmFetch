@@ -53,6 +53,7 @@ body {
   padding: 10px;
   font-size: 16px;
   border: none;
+  border-radius: 10%;
 }
 
 .dropdown {
@@ -94,7 +95,7 @@ body {
 footer {
   text-align: center;
   padding: 5px;
-  color: white;
+  color: orange;
   position: absolute;
   bottom: 0%;
   width: 100%;
@@ -102,9 +103,3 @@ footer {
   font-style: italic;
   font-size: large;
 }
-
-/* @media screen and (max-width: 992px) {
-  header {
-    background: #772014;
-  }
-} */
