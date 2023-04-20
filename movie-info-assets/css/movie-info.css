@@ -1,3 +1,12 @@
 main {
-    color:orange;
+    color:#333;
+    background-color: #eee;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+.overview {
+    font-size: 20px;
 }

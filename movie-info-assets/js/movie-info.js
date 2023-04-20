@@ -34,6 +34,6 @@ function displayResults(movieId) {
             titleEl.textContent = data.title;
             overviewEl.textContent = data.overview;
             // displays the movie backdrop
-            posterEl.setAttribute('src', 'https://image.tmdb.org/t/p/w500' + data.backdrop_path);
+            posterEl.setAttribute('src', 'https://image.tmdb.org/t/p/w300' + data.poster_path);
         });
 };

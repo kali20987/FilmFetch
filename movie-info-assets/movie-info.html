@@ -15,13 +15,18 @@
 </head>
 <body>
     <!-- Nav bar will go here -->
-    <main class="d-flex justify-content-center" id="movie-info-display">
-        <div class="container">
+    
+    <main class="" id="movie-info-display">
+        <div class="movie-info container w-50">
             <!-- Element to display the movie title -->
-            <h2 class="" id="movie-title">Movie Title</h2>
+            <h2 class="text-center" id="movie-title"></h2>
             <!-- Element to display the movie poster -->
-            <img src="" alt="Movie Poster" class="rounded" id="movie-poster"></img>
-            <p class="text-center" id="movie-overview">Hello</p>
+            <div class="d-flex justify-content-center ">
+                <img src="" alt="Movie Poster" class="rounded" id="movie-poster"></img>
+            </div>
+            <div class="overview container m-3">
+                <p class="text-center" id="movie-overview"></p>
+            </div>
         </div>
     </main>        
     <script src="./js/movie-info.js"></script>
