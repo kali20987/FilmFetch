@@ -1,9 +1,82 @@
 /* Beginning of Search Page css */
 .results-cards h5 {
-    font-size: 18px;
+  font-size: 18px;
+}
+.navbar-brand p {
+  color: orange;
 }
 
-a{
-    text-decoration: none;
-    cursor: pointer;
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.title {
+  color: orange;
+  font-size: 20px;
+  text-align: center;
+}
+/* Backround image*/
+
+body {
+  background: #eee no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.pikachu {
+  background-color: #eee;
+}
+
+/* This is the title */
+.navbar-brand {
+  text-align: center;
+  color: white;
+
+  /* This is the menu button and it's properties */
+}
+.dropbtn {
+  background-color: orange;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10%;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+  color: orange;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: grey;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: orange;
+  cursor: pointer;
 }

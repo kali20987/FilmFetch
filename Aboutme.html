@@ -18,46 +18,50 @@
   </head>
 
   <body background="./assets/images/empty-movie-theater-viewed-from-back-of-room.webp">
+    <!-- This is the navbar using bootstrap -->
+
     <nav class="navbar navbar-light bg-dark justify-content-between">
-      <div class="row col-12 container">
 
-        <div class="dropdown col-1">
-          <button class="dropbtn">Menu</button>
-          <div class="dropdown-content">
-            <a href="#"> Home </a>
-            <a href="#"> About us </a>
-          
-
-          </div>
-        </div>
-
-        <div class="col-3">
-          <header class="about"> Title of Website </header>
-        </div>
-
-        <div class="col-3">
-          <input
-            id="searchMovies"
-            class="form-control mr-sm-2" 
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-        </div>
-    
-        <div class="col-3 searchButton">
-          <button
-          id="submit"
-          class="btn btn-outline-success my-2 my-sm-0"
-          type="button"
-          onclick="handleSubmit()";
-          >
-            Search for Movies
-          
-          </button>
+      <div class="dropdown col-1 nav-item m-2">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+          <a href="#"> Home </a>
+          <a href="#"> About us </a>
+      
         </div>
       </div>
-    </nav>
+
+      
+      <div class="col-1 navbar-brand">
+        
+        <p class=" navbar-brand fs-1 nav-item" > FilmFetch </p>
+
+      </div>
+
+
+   <div class="col-3 m-1 ">
+    <input
+      id="searchMovies"
+      class="form-control mr-sm-2" 
+      type="search"
+      placeholder="Search"
+      aria-label="Search"
+  
+  </div>
+  
+<div class="col-3 searchButton m-1">
+    <button
+      id="submit"
+      class="btn btn-outline-success my-2 my-sm-0"
+      type="button" 
+    >
+      Search for Movies
+      
+    </button></div>
+  
+</div>
+</nav>
+      
     <main>
       <!-- Adding Image of Popcorn  -->
       <img class="popcorn" src="./assets/images/popcorn.png" height="250" />
@@ -70,15 +74,15 @@
 
         <br>This website is to showcase for users movie critics and their opinons on
         current and popular movies that are released. This includes reviews, movie
-        critics opinon's recommenations for users,etc.</div></br>
+        critics opinon's recommenations for users,etc.</br>
 
       </div>
-    </main>
-      <!-- Mission Statement -->
 
     <footer>
 
-      <p> Creators >> Alex S, Sal Monzoor, Josh Claxton, & Khadijah Ali</p>
+    <p> Creators : Alex S, Sal Monzoor, Josh Claxton, & Khadijah Ali</p>
+
+  </footer>
 
     </footer>
   </body>
