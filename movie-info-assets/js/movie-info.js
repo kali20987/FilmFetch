@@ -1,4 +1,5 @@
 // Global variables
+var mainEl = document.querySelector('main');
 var titleEl = document.getElementById('movie-title');
 var posterEl = document.getElementById('movie-poster');
 var overviewEl = document.getElementById('movie-overview');
@@ -28,6 +29,10 @@ function displayResults(movieId) {
             return response.json();
         })
         .then(function(data) {
+            if(!data.status) {
+               displayError();
+               return; 
+            }
             // creates a console.log of the readable movie information
             console.log(data);
             // sets the text of title and overview
@@ -37,3 +42,18 @@ function displayResults(movieId) {
             posterEl.setAttribute('src', 'https://image.tmdb.org/t/p/w300' + data.poster_path);
         });
 };
+
+function displayError() {
+    var errorMessage = document.createElement('h1')
+    var errorReason = document.createElement('h3')
+
+    posterEl.classList.add('d-none')
+    errorMessage.classList.add('text-center')
+    errorReason.classList.add('text-center')
+    
+    errorMessage.textContent = '404';
+    errorReason.textContent = 'Unfortunately, the movie you are looking for either does not exist or is not released yet';
+
+    mainEl.appendChild(errorMessage);
+    mainEl.appendChild(errorReason);
+}
