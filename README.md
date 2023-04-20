@@ -13,7 +13,7 @@ https://claxcode.github.io/captain-planet/
 
 ## Usage
 
-To use this movie application, you must navigate to the search bar and enter a genre you would like to see recommendations for. Then, if you would like to see more results, click on 'Browse more titles in this genre'. From there you have the option of filtering your searches by name, release date, and critic score. 
+To use this movie application, you must navigate to the search bar and enter a genre you would like to see recommendations for. Then, if you would like to see more results, click on 'Browse more titles'. From there you have the option of filtering your searches by name, release date, critic score, and genre. 
 
 ## Credits
 
