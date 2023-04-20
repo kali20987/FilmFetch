@@ -1,6 +1,10 @@
 /*  
 *{}
 This is where we will add universal elements to make the websites the same format wise */
+.title {
+  color: white;
+  font-size: 20px;
+}
 
 .navbar-brand {
   text-align: center;
@@ -61,11 +65,3 @@ footer {
   width: 100%;
   background-color: #04aa6d;
 }
-
-/* #submit {
-  text-align: center;
-}
-
-#searchMovies {
-  text-align: center;
-} */

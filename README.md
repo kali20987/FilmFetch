@@ -21,6 +21,3 @@ To use this movie application, you must navigate to the search bar and enter a g
 - Bootstrap: https://getbootstrap.com/
 - themoviedb: https://api.themoviedb.org
 - movieglu: developer.movieglu.com
-
-
-
