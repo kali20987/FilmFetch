@@ -14,60 +14,60 @@
       crossorigin="anonymous"
     />
 
-    <title> FilmFetch </title> 
 
     <!-- Linking the CSS file -->
 
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/recs.css" />
 
-    <!-- This is the navbar using bootstrap -->
     
+   
+    <!-- This is the navbar using bootstrap -->
+
     <nav class="navbar navbar-light bg-dark justify-content-between">
-      <div class="row col-12 container">
+
+      <div class="dropdown col-1 nav-item m-2">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+          <a href="#"> Home </a>
+          <a href="#"> About us </a>
       
-          <!-- This is the button for dropdown menu  -->
-
-          <div class="dropdown col-1">
-            <button class="dropbtn">Menu</button>
-            <div class="dropdown-content">
-              <a href="#"> Home </a>
-              <a href="#"> About us </a>
-             
-  
-            </div>
-          </div>
-
-
-          <div class="col-3">
-          <header class="title"> FilmFetch </header>
-          </div>
-
-
-       <div class="col-3">
-        <input
-          id="searchMovies"
-          class="form-control mr-sm-2" 
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
+        </div>
       </div>
+
       
-<div class="col-3 searchButton">
-        <button
-          id="submit"
-          class="btn btn-outline-success my-2 my-sm-0"
-          type="button" 
-        >
-          Search for Movies
-          
-        </button></div>
-      </form>
-    </div>
-    </nav>
+      <div class="col-1 navbar-brand">
+        
+        <p class=" navbar-brand fs-1 nav-item" > FilmFetch </p>
+
+      </div>
+
+
+   <div class="col-3 m-1 ">
+    <input
+      id="searchMovies"
+      class="form-control mr-sm-2" 
+      type="search"
+      placeholder="Search"
+      aria-label="Search"
+  
+  </div>
+  
+<div class="col-3 searchButton m-1">
+    <button
+      id="submit"
+      class="btn btn-outline-success my-2 my-sm-0"
+      type="button" 
+    >
+      Search for Movies
+      
+    </button></div>
+  
+</div>
+</nav>
+      
   </head>
-<body>
+
   <h1 style="color:orange; text-align:center"> Genre Recommendation Title</h1>
 <div id="browse" >
   <a href="http://127.0.0.1:5500/search-page-assets/search-page.html">
@@ -122,3 +122,46 @@
 
 
 </html>
+ <!-- <nav class="navbar navbar-light bg-dark justify-content-between">
+      <div class="row col-12 container"> -->
+      
+          <!-- This is the button for dropdown menu  -->
+<!-- 
+          <div class="dropdown col-1">
+            <button class="dropbtn">Menu</button>
+            <div class="dropdown-content">
+              <a href="#"> Home </a>
+              <a href="#"> About us </a>
+             
+  
+            </div>
+          </div>
+
+
+          <div class="col-1 navbar-brand">
+          <header class="title"> FilmFetch </header>
+          </div>
+
+
+       <div class="col-3">
+        <input
+          id="searchMovies"
+          class="form-control mr-sm-2" 
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+      </div>
+      
+<div class="col-3 searchButton">
+        <button
+          id="submit"
+          class="btn btn-outline-success my-2 my-sm-0"
+          type="button" 
+        >
+          Search for Movies
+          
+        </button></div>
+      </form>
+    </div>
+    </nav>-->

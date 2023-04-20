@@ -3,6 +3,9 @@
   font-size: 20px;
   text-align: center;
 }
+.navbar-brand p {
+  color: orange;
+}
 
 body {
   color: #333;

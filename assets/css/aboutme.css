@@ -11,6 +11,9 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+.navbar-brand p {
+  color: orange;
+}
 
 /* about me section */
 .text {
@@ -22,12 +25,12 @@ body {
   top: 0;
   left: 0;
   background-color: beige;
-  width: 440px;
-  height: 300px;
+  width: 443px;
+  height: 40px;
   border: 10px solid orange;
   padding: 22px;
   padding-bottom: 14%;
-  margin-top: 3%;
+  margin-top: 6.5%;
   margin-left: 24%;
 }
 

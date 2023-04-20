@@ -2,6 +2,9 @@
 .results-cards h5 {
   font-size: 18px;
 }
+.navbar-brand p {
+  color: orange;
+}
 
 a {
   text-decoration: none;
