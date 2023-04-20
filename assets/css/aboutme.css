@@ -3,8 +3,8 @@
   color: white;
   text-align: center;
 }
-html {
-  background: url(./empty-movie-theater-viewed-from-back-of-room.webp) no-repeat
+body {
+  background: url(../images/empty-movie-theater-viewed-from-back-of-room.webp) no-repeat
     center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
