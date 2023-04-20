@@ -66,20 +66,20 @@ function renderCards(pageNmbr) {
     // resets the innerHTML so that nothing remains before new information is displayed
     resultDisplayEl.innerHTML = '';
     // the max page limit a user can hit is 500. If they reach this point and try to go further, it will just redisplay the last page
-    if(pageNmbr > 500){
+    if (pageNmbr > 500) {
         pageNmbr = 500; // this needs to be changed to an error screen
     };
     // fetchs the API for The Movie Database
-    fetch('https://api.themoviedb.org/3/discover/movie?api_key=' + tmdbKey + '&language=en-US&region=US&include_adult=false&include_video=false&page=' + pageNmbr + '&with_genres=' + genreInputs )
-        .then(function(response) {
+    fetch('https://api.themoviedb.org/3/discover/movie?api_key=' + tmdbKey + '&language=en-US&region=US&include_adult=false&include_video=false&page=' + pageNmbr + '&with_genres=' + genreInputs)
+        .then(function (response) {
             // returns API information in a readable json format
             return response.json();
         })
-        .then(function(data) {
+        .then(function (data) {
             // displays API information to the console so that I can read it
             console.log(data);
             // iterates through the data.results to display all of the necessary movie information
-            for(var i = 0; i < data.results.length; i++) {
+            for (var i = 0; i < data.results.length; i++) {
                 // creates an anchor tag to wrap the movie information in. When a user clicks the element, they will be redirected to a page that displays more detailed movie information
                 var resultCard = document.createElement('a');
                 resultCard.classList.add('results-cards', 'card', 'col-2', 'm-1', 'mx-4', 'p-2', 'bg-dark', 'text-light');
@@ -87,7 +87,7 @@ function renderCards(pageNmbr) {
                 // creates an image element to display the movie poster
                 var moviePoster = document.createElement('img');
                 moviePoster.setAttribute('alt', 'Movie Poster');
-                moviePoster.setAttribute('src', 'https://image.tmdb.org/t/p/w500' + data.results[i].poster_path); 
+                moviePoster.setAttribute('src', 'https://image.tmdb.org/t/p/w500' + data.results[i].poster_path);
                 // creates a title element to display the movie title
                 var movieTitle = document.createElement('h5');
                 movieTitle.classList.add('col', 'my-2');
@@ -109,24 +109,24 @@ function renderCards(pageNmbr) {
 renderCards();
 
 // when a user clicks this button, this will display the results for the first page
-firstBtn.addEventListener('click', function() {
-    if(pageNmbr > 1) {
+firstBtn.addEventListener('click', function () {
+    if (pageNmbr > 1) {
         pageNmbr = 1
     }
     renderCards(pageNmbr)
 });
 // when a user clicks this button, this will display the results for the previous page
-prevBtn.addEventListener('click', function() {
-    if(pageNmbr > 1) {
+prevBtn.addEventListener('click', function () {
+    if (pageNmbr > 1) {
         pageNmbr--;
     }
     renderCards(pageNmbr)
 });
 // when a user clicks this button, this will display the results for the next page
-nextBtn.addEventListener('click', function() {
-    if(pageNmbr > 0) {
+nextBtn.addEventListener('click', function () {
+    if (pageNmbr > 0) {
         pageNmbr++;
-    } 
+    }
     renderCards(pageNmbr)
 });
 
@@ -138,135 +138,158 @@ nextBtn.addEventListener('click', function() {
 
 $(function () {
     $('#datepicker').datepicker({
-      changeMonth: true,
-      changeYear: true,
+        changeMonth: true,
+        changeYear: true,
     });
-  });
+});
 
-  checkAction.addEventListener('change', function() {
+checkAction.addEventListener('change', function () {
     if (this.checked) {
-        console.log("You checked it!")
-        console.log(checkAction.value);
         genreInputs.push(checkAction.value);
+    } else {
+        for (var i = 0; i < genreInputs.length; i++) {
+            if (genreInputs[i] === checkAction.value) {
+                genreInputs.splice(i, checkAction.value);
+            }
+        }
     }
-     renderCards();
+    renderCards();
 });
 
-  
-  checkAdventure.addEventListener('change', function() {
+
+checkAdventure.addEventListener('change', function () {
     if (this.checked) {
-        console.log("You checked it!")
-        console.log(checkAdventure.value);
         genreInputs.push(checkAdventure.value);
+    } else {
+        for (var i = 0; i < genreInputs.length; i++) {
+            if (genreInputs[i] === checkAdventure.value) {
+                genreInputs.splice(i, checkAdventure.value);
+            }
+        }
     }
-     renderCards();
+    renderCards();
 });
 
-checkAnimation.addEventListener('change', function() {
+checkAnimation.addEventListener('change', function () {
     if (this.checked) {
-        console.log("You checked it!")
-        console.log(checkAnimation.value);
         genreInputs.push(checkAnimation.value);
+    } else {
+        for (var i = 0; i < genreInputs.length; i++) {
+            if (genreInputs[i] === checkAnimation.value) {
+                genreInputs.splice(i, checkAnimation.value);
+            }
+        }
     }
-     renderCards();
+    renderCards();
 });
 
-checkComedy.addEventListener('change', function() {
+checkComedy.addEventListener('change', function () {
     if (this.checked) {
-        console.log("You checked it!")
-        console.log(checkComedy.value);
         genreInputs.push(checkComedy.value);
+    } else {
+        for (var i = 0; i < genreInputs.length; i++) {
+            if (genreInputs[i] === checkComedy.value) {
+                genreInputs.splice(i, checkComedy.value);
+            }
+        }
     }
-     renderCards();
+    renderCards();
 });
 
-checkCrime.addEventListener('change', function() {
+checkCrime.addEventListener('change', function () {
     if (this.checked) {
         genreInputs.push(checkCrime.value);
     } else {
-        for (var i = 0; i < genreInputs.length; i++);
+        for (var i = 0; i < genreInputs.length; i++) {
             if (genreInputs[i] === checkCrime.value) {
                 genreInputs.splice(i, checkCrime.value);
             }
+        }
     }
-     renderCards();
+    renderCards();
 });
 
-checkDocumentary.addEventListener('change', function() {
+checkDocumentary.addEventListener('change', function () {
     if (this.checked) {
         genreInputs.push(checkDocumentary.value);
     } else {
-        for (var i=0; i < genreInputs.length; i++) {
-            if(genreInputs[i] === checkDocumentary.value) {
+        for (var i = 0; i < genreInputs.length; i++) {
+            if (genreInputs[i] === checkDocumentary.value) {
                 genreInputs.splice(i, checkDocumentary.value);
             }
         }
     }
-     renderCards();
+    renderCards();
 });
 
-checkDrama.addEventListener('change', function() {
+checkDrama.addEventListener('change', function () {
     if (this.checked) {
         genreInputs.push(checkDrama.value);
+    } else {
+            for (var i = 0; i < genreInputs.length; i++) {
+                if (genreInputs[i] === checkDrama.value) {
+                    genreInputs.splice(i, checkDrama.value);
+                }
+            }     
     }
-     renderCards();
+    renderCards();
 });
 
-checkFamily.addEventListener('change', function() {
+checkFamily.addEventListener('change', function () {
     if (this.checked) {
         genreInputs.push(checkFamily.value);
     }
-     renderCards();
+    renderCards();
 });
 
-checkFantasy.addEventListener('change', function() {
+checkFantasy.addEventListener('change', function () {
     if (this.checked) {
         genreInputs.push(checkFantasy.value);
     }
-     renderCards();
+    renderCards();
 });
 
-checkHistory.addEventListener('change', function() {
+checkHistory.addEventListener('change', function () {
     if (this.checked) {
         genreInputs.push(checkHistory.value);
     }
-     renderCards();
+    renderCards();
 });
 
-checkHorror.addEventListener('change', function() {
+checkHorror.addEventListener('change', function () {
     if (this.checked) {
         genreInputs.push(checkHorror.value);
     }
-     renderCards();
+    renderCards();
 });
 
-checkMusic.addEventListener('change', function() {
+checkMusic.addEventListener('change', function () {
     if (this.checked) {
         console.log("You checked it!")
         console.log(checkMusic.value);
         genreInputs.push(checkMusic.value);
     }
-     renderCards();
+    renderCards();
 });
 
-checkMusic.addEventListener('change', function() {
+checkMusic.addEventListener('change', function () {
     if (this.checked) {
         console.log("You checked it!")
         console.log(checkMusic.value);
         genreInputs.push(checkMusic.value);
     }
-     renderCards();
+    renderCards();
 });
 
 
 
-checkWar.addEventListener('change', function() {
+checkWar.addEventListener('change', function () {
     if (this.checked) {
         console.log("You checked it!")
         console.log(checkWar.value);
         genreInputs.push(checkWar.value);
     }
-     renderCards();
+    renderCards();
 });
 
 
