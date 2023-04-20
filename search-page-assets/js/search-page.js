@@ -143,25 +143,49 @@ $(function () {
   });
 
 
-//   filterCheck.addEventListener('change', function() {
-//     if (this.checked) {
-//         console.log("Checkbox is checked!");
-//         genreInputs.push(this.value)
-//         console.log(genreInputs)
-//     }
-  
-//     // renderCards();
-// })
 
-
-checkFamily.addEventListener('change', function() {
+  checkAdventure.addEventListener('change', function() {
     if (this.checked) {
         console.log("You checked it!")
-        genreInputs.push(checkStarEight.value)
-        console.log(genreInputs.push(checkFamily))
+        console.log(checkAdventure.value);
+        genreInputs.push(checkAdventure.value);
     }
-    // renderCards();
-})
+     renderCards();
+});
 
 
+checkDocumentary.addEventListener('change', function() {
+    if (this.checked) {
+        console.log("You checked it!")
+        console.log(checkDocumentary.value);
+        genreInputs.push(checkDocumentary.value);
+    }
+     renderCards();
+});
 
+checkWar.addEventListener('change', function() {
+    if (this.checked) {
+        console.log("You checked it!")
+        console.log(checkWar.value);
+        genreInputs.push(checkWar.value);
+    }
+     renderCards();
+});
+
+checkMusic.addEventListener('change', function() {
+    if (this.checked) {
+        console.log("You checked it!")
+        console.log(checkMusic.value);
+        genreInputs.push(checkMusic.value);
+    }
+     renderCards();
+});
+
+checkFantasy.addEventListener('change', function() {
+    if (this.checked) {
+        console.log("You checked it!")
+        console.log(checkFantasy.value);
+        genreInputs.push(checkFantasy.value);
+    }
+     renderCards();
+});
