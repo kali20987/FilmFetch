@@ -9,13 +9,13 @@ var nextBtn = document.getElementById('nextBtn');
 // sets the default page number to 1
 var pageNmbr = 1;
 
-// Josh JS :x
+// Added variables for targeting user-rating checkboxes.
 var checkStarEight = document.querySelector("input[id=star-8]");
 var checkStarSix = document.querySelector("input[id=star-6]");
 var checkStarFour = document.querySelector("input[id=star-4]");
 var checkstarTwo = document.querySelector("input[id=star-2]");
 var checkStarZero = document.querySelector("input[id=star-0]");
-
+// Added variables for targetting genre-specific checkboxes.
 var checkAction = document.querySelector("input[id=genre-action]");
 var checkAdventure = document.querySelector("input[id=genre-adventure]");
 var checkAnimation = document.querySelector("input[id=genre-animation]");
@@ -25,9 +25,17 @@ var checkDocumentary = document.querySelector("input[id=genre-documentary]");
 var checkDrama = document.querySelector("input[id=genre-drama]");
 var checkFamily = document.querySelector("input[id=genre-family]")
 var checkFantasy = document.querySelector("input[id=genre-fantasy]");
-
-var checkWar = document.querySelector("input[id=genre-war]");
+var checkHistory = document.querySelector("input[id=genre-history");
+var checkHorror = document.querySelector("input[id=genre-horror");
 var checkMusic = document.querySelector("input[id=genre-music]");
+var checkMystery = document.querySelector("input[id=genre-mystery");
+var checkRomance = document.querySelector("input[id=genre-romance");
+var checkScifi = document.querySelector("input[id=genre-scifi");
+var checkTvMovie = document.querySelector("input[id=genre-tvmovie");
+var checkThriller = document.querySelector("input[id=genre-thriller");
+var checkWar = document.querySelector("input[id=genre-war]");
+var checkWestern = document.querySelector("input[id=genre-western");
+
 
 
 
@@ -135,13 +143,15 @@ nextBtn.addEventListener('click', function () {
 // Draw filter data as variable
 // Use filter variables in api key
 
-
+// Adds jQuery functionality for the datepicker feature.
 $(function () {
     $('#datepicker').datepicker({
         changeMonth: true,
         changeYear: true,
     });
 });
+
+// Lines below add functionality for filtering via  multiple checkboxes in search filter.
 
 checkAction.addEventListener('change', function () {
     if (this.checked) {
@@ -155,7 +165,6 @@ checkAction.addEventListener('change', function () {
     }
     renderCards();
 });
-
 
 checkAdventure.addEventListener('change', function () {
     if (this.checked) {
@@ -226,11 +235,11 @@ checkDrama.addEventListener('change', function () {
     if (this.checked) {
         genreInputs.push(checkDrama.value);
     } else {
-            for (var i = 0; i < genreInputs.length; i++) {
-                if (genreInputs[i] === checkDrama.value) {
-                    genreInputs.splice(i, checkDrama.value);
-                }
-            }     
+        for (var i = 0; i < genreInputs.length; i++) {
+            if (genreInputs[i] === checkDrama.value) {
+                genreInputs.splice(i, checkDrama.value);
+            }
+        }
     }
     renderCards();
 });
@@ -238,6 +247,12 @@ checkDrama.addEventListener('change', function () {
 checkFamily.addEventListener('change', function () {
     if (this.checked) {
         genreInputs.push(checkFamily.value);
+    } else {
+        for (var i = 0; i < genreInputs.length; i++) {
+            if (genreInputs[i] === checkFamily.value) {
+                genreInputs.splice(i, checkFamily.value);
+            }
+        }
     }
     renderCards();
 });
@@ -245,6 +260,12 @@ checkFamily.addEventListener('change', function () {
 checkFantasy.addEventListener('change', function () {
     if (this.checked) {
         genreInputs.push(checkFantasy.value);
+    } else {
+        for (var i = 0; i < genreInputs.length; i++) {
+            if (genreInputs[i] === checkFantasy.value) {
+                genreInputs.splice(i, checkFantasy.value);
+            }
+        }
     }
     renderCards();
 });
@@ -252,6 +273,12 @@ checkFantasy.addEventListener('change', function () {
 checkHistory.addEventListener('change', function () {
     if (this.checked) {
         genreInputs.push(checkHistory.value);
+    } else {
+        for (var i = 0; i < genreInputs.length; i++) {
+            if (genreInputs[i] === checkHistory.value) {
+                genreInputs.splice(i, checkHistory.value);
+            }
+        }
     }
     renderCards();
 });
@@ -259,37 +286,117 @@ checkHistory.addEventListener('change', function () {
 checkHorror.addEventListener('change', function () {
     if (this.checked) {
         genreInputs.push(checkHorror.value);
+    } else {
+        for (var i = 0; i < genreInputs.length; i++) {
+            if (genreInputs[i] === checkHorror.value) {
+                genreInputs.splice(i, checkHorror.value);
+            }
+        }
     }
     renderCards();
 });
 
 checkMusic.addEventListener('change', function () {
     if (this.checked) {
-        console.log("You checked it!")
-        console.log(checkMusic.value);
         genreInputs.push(checkMusic.value);
+    } else {
+        for (var i = 0; i < genreInputs.length; i++) {
+            if (genreInputs[i] === checkMusic.value) {
+                genreInputs.splice(i, checkMusic.value);
+            }
+        }
     }
     renderCards();
 });
 
-checkMusic.addEventListener('change', function () {
+checkMystery.addEventListener('change', function () {
     if (this.checked) {
-        console.log("You checked it!")
-        console.log(checkMusic.value);
-        genreInputs.push(checkMusic.value);
+        genreInputs.push(checkMystery.value);
+    } else {
+        for (var i = 0; i < genreInputs.length; i++) {
+            if (genreInputs[i] === checkMystery.value) {
+                genreInputs.splice(i, checkMystery.value);
+            }
+        }
     }
     renderCards();
 });
 
+checkRomance.addEventListener('change', function () {
+    if (this.checked) {
+        genreInputs.push(checkRomance.value);
+    } else {
+        for (var i = 0; i < genreInputs.length; i++) {
+            if (genreInputs[i] === checkRomance.value) {
+                genreInputs.splice(i, checkRomance.value);
+            }
+        }
+    }
+    renderCards();
+});
 
+checkScifi.addEventListener('change', function () {
+    if (this.checked) {
+        genreInputs.push(checkScifi.value);
+    } else {
+        for (var i = 0; i < genreInputs.length; i++) {
+            if (genreInputs[i] === checkScifi.value) {
+                genreInputs.splice(i, checkScifi.value);
+            }
+        }
+    }
+    renderCards();
+});
+
+checkTvMovie.addEventListener('change', function () {
+    if (this.checked) {
+        genreInputs.push(checkTvMovie.value);
+    } else {
+        for (var i = 0; i < genreInputs.length; i++) {
+            if (genreInputs[i] === checkTvMovie.value) {
+                genreInputs.splice(i, checkTvMovie.value);
+            }
+        }
+    }
+    renderCards();
+});
+
+checkThriller.addEventListener('change', function () {
+    if (this.checked) {
+        genreInputs.push(checkThriller.value);
+    } else {
+        for (var i = 0; i < genreInputs.length; i++) {
+            if (genreInputs[i] === checkThriller.value) {
+                genreInputs.splice(i, checkThriller.value);
+            }
+        }
+    }
+    renderCards();
+});
 
 checkWar.addEventListener('change', function () {
     if (this.checked) {
-        console.log("You checked it!")
-        console.log(checkWar.value);
         genreInputs.push(checkWar.value);
+    } else {
+        for (var i = 0; i < genreInputs.length; i++) {
+            if (genreInputs[i] === checkWar.value) {
+                genreInputs.splice(i, checkWar.value);
+            }
+        }
     }
     renderCards();
 });
 
+checkWestern.addEventListener('change', function () {
+    if (this.checked) {
+        genreInputs.push(checkWestern.value);
+    } else {
+        for (var i = 0; i < genreInputs.length; i++) {
+            if (genreInputs[i] === checkWestern.value) {
+                genreInputs.splice(i, checkWestern.value);
+            }
+        }
+    }
+    renderCards();
+});
 
