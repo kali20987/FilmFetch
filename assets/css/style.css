@@ -20,17 +20,15 @@ This is where we will add universal elements to make the websites the same forma
   border: none;
 }
 
-.dropdown {
-  position: relative;
+.dropdown { 
   display: inline-block;
 }
 
 .dropdown-content {
   display: none;
-  position: absolute;
+  position: absolute; 
   background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  min-width: 160px; 
 }
 
 .dropdown-content a {
@@ -58,10 +56,10 @@ This is where we will add universal elements to make the websites the same forma
 /*  This is the footer */
 footer {
   text-align: center;
-  padding: 12px;
+  padding: 12px; 
   color: white;
-  position: absolute;
   bottom: 0%;
   width: 100%;
   background-color: #04aa6d;
+  margin-top: 505px;
 }
