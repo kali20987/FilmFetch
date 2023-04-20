@@ -1,3 +1,9 @@
+.title {
+  color: orange;
+  font-size: 20px;
+  text-align: center;
+}
+
 body {
   color: #333;
   background-color: #eee;
