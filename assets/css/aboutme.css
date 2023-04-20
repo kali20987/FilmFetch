@@ -1,6 +1,6 @@
 /* Made the backround center for the pictures and about me to */
 .about {
-  color: white;
+  color: orange;
   text-align: center;
 }
 body {
@@ -24,7 +24,7 @@ body {
   background-color: beige;
   width: 450px;
   height: 313px;
-  border: 10px solid red;
+  border: 10px solid orange;
   padding: 40px;
   margin-top: 3%;
   margin-left: 22.7%;
@@ -48,7 +48,7 @@ body {
   /* This is the menu button and it's properties */
 }
 .dropbtn {
-  background-color: #04aa6d;
+  background-color: orange;
   color: white;
   padding: 10px;
   font-size: 16px;
@@ -69,14 +69,14 @@ body {
 }
 
 .dropdown-content a {
-  color: red;
+  color: orange;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: grey;
   cursor: pointer;
 }
 
@@ -86,7 +86,7 @@ body {
 }
 
 .dropdown:hover .dropbtn {
-  background-color: #3e8e41;
+  background-color: orange;
   cursor: pointer;
 }
 
@@ -98,7 +98,7 @@ footer {
   position: absolute;
   bottom: 0%;
   width: 100%;
-  background-color: #04aa6d;
+  background-color: grey;
   font-style: italic;
   font-size: large;
 }
