@@ -9,6 +9,27 @@ var nextBtn = document.getElementById('nextBtn');
 // sets the default page number to 1
 var pageNmbr = 1;
 
+// Josh JS :x
+var checkStarEight = document.querySelector("input[id=star-8]");
+var checkStarSix = document.querySelector("input[id=star-6]");
+var checkStarFour = document.querySelector("input[id=star-4]");
+var checkstarTwo = document.querySelector("input[id=star-2]");
+var checkStarZero = document.querySelector("input[id=star-0]");
+
+var checkAction = document.querySelector("input[id=genre-action]");
+var checkAdventure = document.querySelector("input[id=genre-adventure]");
+var checkAnimation = document.querySelector("input[id=genre-animation]");
+var checkComedy = document.querySelector("input[id=genre-comedy]");
+var checkCrime = document.querySelector("input[id=genre-crime]");
+var checkDocumentary = document.querySelector("input[id=genre-documentary]");
+var checkDrama = document.querySelector("input[id=genre-drama]");
+var checkFamily = document.querySelector("input[id=genre-family]")
+var checkFantasy = document.querySelector("input[id=genre-fantasy]");
+
+
+
+
+
 //genres
 // {id: 12, name: 'Adventure'}
 // {id: 14, name: 'Fantasy'}
@@ -120,3 +141,27 @@ $(function () {
       changeYear: true,
     });
   });
+
+
+//   filterCheck.addEventListener('change', function() {
+//     if (this.checked) {
+//         console.log("Checkbox is checked!");
+//         genreInputs.push(this.value)
+//         console.log(genreInputs)
+//     }
+  
+//     // renderCards();
+// })
+
+
+checkFamily.addEventListener('change', function() {
+    if (this.checked) {
+        console.log("You checked it!")
+        genreInputs.push(checkStarEight.value)
+        console.log(genreInputs.push(checkFamily))
+    }
+    // renderCards();
+})
+
+
+
