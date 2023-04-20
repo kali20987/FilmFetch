@@ -1,84 +1,7 @@
-/* Made the backround center for the pictures and about me to */
-.about {
-  color: orange;
-  text-align: center;
-}
-html {
-  background: url(./empty-movie-theater-viewed-from-back-of-room.webp) no-repeat
-    center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-/* about me section */
-.text {
-  text-align: center;
-  font-style: italic;
-  font-size: large;
-  border-radius: 20px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: beige;
-  width: 447px;
-  height: 313px;
-  border: 10px solid orange;
-  padding: 40px;
-  margin-top: 3%;
-  margin-left: 22.7%;
-}
+/* Moving the images below the nav bar! Popcorn below the Nav Bar and then on the right of it is about me. Then below is mission statement and on the right the theater image */
 
 .popcorn {
-  border-radius: 20px;
-  width: 30%;
-  height: 31.5%;
-  right: 0;
-  position: absolute;
-  margin-right: 24%;
-  border: 10px solid orange;
-}
-
-/* Nav bar information */
-
-.navbar-brand {
-  text-align: center;
-  color: white;
-
-  /* This is the menu button and it's properties */
-}
-.dropbtn {
-  background-color: orange;
-  color: white;
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-}
-
-.dropdown {
   position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: grey;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-}
-
-.dropdown-content a {
-  color: orange;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: orange;
-  cursor: pointer;
 }
 
 .dropdown:hover .dropdown-content {
@@ -86,20 +9,24 @@ html {
   cursor: pointer;
 }
 
-.dropdown:hover .dropbtn {
-  background-color: orange;
-  cursor: pointer;
+.text {
+  background-color: lightgrey;
+  width: 300px;
+  border: 15px solid red;
+  padding: 50px;
+  margin: 20px;
 }
 
-/*  This is the footer */
-footer {
-  text-align: center;
-  padding: 5px;
-  color: white;
-  position: absolute;
-  bottom: 0%;
-  width: 100%;
-  background-color: grey;
-  font-style: italic;
-  font-size: large;
+.texts {
+  background-color: lightgrey;
+  width: 300px;
+  border: 15px solid red;
+  padding: 50px;
+  margin: 20px;
 }
+
+/* @media screen and (max-width: 992px) {
+  header {
+    background: #772014;
+  }
+} */
