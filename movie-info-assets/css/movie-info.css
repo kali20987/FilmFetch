@@ -14,7 +14,7 @@ h2 {
 /* Backround image*/
 
 body {
-  background: grey no-repeat center center fixed;
+  background: #eee;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

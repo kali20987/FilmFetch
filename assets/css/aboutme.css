@@ -22,17 +22,19 @@ body {
   top: 0;
   left: 0;
   background-color: beige;
-  width: 450px;
-  height: 313px;
+  width: 440px;
+  height: 300px;
   border: 10px solid orange;
-  padding: 40px;
+  padding: 22px;
+  padding-bottom: 14%;
   margin-top: 3%;
-  margin-left: 22.7%;
+  margin-left: 24%;
 }
 
 .popcorn {
   border-radius: 15px;
-  width: 30%;
+  border: 10px solid orange;
+  width: 29%;
   height: 31.5%;
   right: 0;
   position: absolute;
@@ -99,7 +101,7 @@ footer {
   position: absolute;
   bottom: 0%;
   width: 100%;
-  background-color: grey;
+  background-color: rgb(36, 36, 36);
   font-style: italic;
   font-size: large;
 }

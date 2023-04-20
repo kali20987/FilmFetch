@@ -11,11 +11,15 @@ a {
 /* Backround image*/
 
 body {
-  background: grey no-repeat center center fixed;
+  background: #eee no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.pikachu {
+  background-color: #eee;
 }
 
 /* Tthis is the title */

@@ -62,7 +62,7 @@ footer {
   position: absolute;
   bottom: 0%;
   width: 100%;
-  background-color: grey;
+  background-color: rgb(36, 36, 36);
   font-style: italic;
   font-size: large;
 }
