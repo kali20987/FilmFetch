@@ -26,7 +26,8 @@ var checkDrama = document.querySelector("input[id=genre-drama]");
 var checkFamily = document.querySelector("input[id=genre-family]")
 var checkFantasy = document.querySelector("input[id=genre-fantasy]");
 
-
+var checkWar = document.querySelector("input[id=genre-war]");
+var checkMusic = document.querySelector("input[id=genre-music]");
 
 
 
@@ -142,8 +143,16 @@ $(function () {
     });
   });
 
+  checkAction.addEventListener('change', function() {
+    if (this.checked) {
+        console.log("You checked it!")
+        console.log(checkAction.value);
+        genreInputs.push(checkAction.value);
+    }
+     renderCards();
+});
 
-
+  
   checkAdventure.addEventListener('change', function() {
     if (this.checked) {
         console.log("You checked it!")
@@ -153,21 +162,80 @@ $(function () {
      renderCards();
 });
 
-
-checkDocumentary.addEventListener('change', function() {
+checkAnimation.addEventListener('change', function() {
     if (this.checked) {
         console.log("You checked it!")
-        console.log(checkDocumentary.value);
-        genreInputs.push(checkDocumentary.value);
+        console.log(checkAnimation.value);
+        genreInputs.push(checkAnimation.value);
     }
      renderCards();
 });
 
-checkWar.addEventListener('change', function() {
+checkComedy.addEventListener('change', function() {
     if (this.checked) {
         console.log("You checked it!")
-        console.log(checkWar.value);
-        genreInputs.push(checkWar.value);
+        console.log(checkComedy.value);
+        genreInputs.push(checkComedy.value);
+    }
+     renderCards();
+});
+
+checkCrime.addEventListener('change', function() {
+    if (this.checked) {
+        genreInputs.push(checkCrime.value);
+    } else {
+        for (var i = 0; i < genreInputs.length; i++);
+            if (genreInputs[i] === checkCrime.value) {
+                genreInputs.splice(i, checkCrime.value);
+            }
+    }
+     renderCards();
+});
+
+checkDocumentary.addEventListener('change', function() {
+    if (this.checked) {
+        genreInputs.push(checkDocumentary.value);
+    } else {
+        for (var i=0; i < genreInputs.length; i++) {
+            if(genreInputs[i] === checkDocumentary.value) {
+                genreInputs.splice(i, checkDocumentary.value);
+            }
+        }
+    }
+     renderCards();
+});
+
+checkDrama.addEventListener('change', function() {
+    if (this.checked) {
+        genreInputs.push(checkDrama.value);
+    }
+     renderCards();
+});
+
+checkFamily.addEventListener('change', function() {
+    if (this.checked) {
+        genreInputs.push(checkFamily.value);
+    }
+     renderCards();
+});
+
+checkFantasy.addEventListener('change', function() {
+    if (this.checked) {
+        genreInputs.push(checkFantasy.value);
+    }
+     renderCards();
+});
+
+checkHistory.addEventListener('change', function() {
+    if (this.checked) {
+        genreInputs.push(checkHistory.value);
+    }
+     renderCards();
+});
+
+checkHorror.addEventListener('change', function() {
+    if (this.checked) {
+        genreInputs.push(checkHorror.value);
     }
      renderCards();
 });
@@ -181,11 +249,24 @@ checkMusic.addEventListener('change', function() {
      renderCards();
 });
 
-checkFantasy.addEventListener('change', function() {
+checkMusic.addEventListener('change', function() {
     if (this.checked) {
         console.log("You checked it!")
-        console.log(checkFantasy.value);
-        genreInputs.push(checkFantasy.value);
+        console.log(checkMusic.value);
+        genreInputs.push(checkMusic.value);
     }
      renderCards();
 });
+
+
+
+checkWar.addEventListener('change', function() {
+    if (this.checked) {
+        console.log("You checked it!")
+        console.log(checkWar.value);
+        genreInputs.push(checkWar.value);
+    }
+     renderCards();
+});
+
+
