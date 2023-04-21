@@ -23,13 +23,13 @@ body {
   border-radius: 15px;
   position: absolute;
   top: 0;
-  left: 0;
   background-color: beige;
-  width: 443px;
-  height: 40px;
+  width: 446px;
+  height: 48px;
   border: 10px solid orange;
-  padding: 22px;
-  padding-bottom: 14%;
+  padding: 60px;
+  padding-bottom: 12%;
+  color: orange;
   margin-top: 3%;
   margin-left: 24%;
 }
