@@ -4,6 +4,8 @@
 
 This movie application was created to alleviate the struggles movie enthusiasts go through when deciding on the perfect movie to watch. It contains HTML, CSS, JavaScript, Bootstrap, and jQuery.
 
+<!-- This is screenshots for the movie info and search page -->
+
 ![alt text](../captain-planet/Assets/images/Movie%20Info.png)
 
 ![alt text](../captain-planet/Assets/images/search.png)
