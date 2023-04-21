@@ -57,3 +57,4 @@ function displayError() {
     mainEl.appendChild(errorMessage);
     mainEl.appendChild(errorReason);
 }
+
