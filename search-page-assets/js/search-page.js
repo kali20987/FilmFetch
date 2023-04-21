@@ -143,13 +143,7 @@ nextBtn.addEventListener('click', function () {
 // Draw filter data as variable
 // Use filter variables in api key
 
-// Adds jQuery functionality for the datepicker feature.
-$(function () {
-    $('#datepicker').datepicker({
-        changeMonth: true,
-        changeYear: true,
-    });
-});
+
 
 // Lines below add functionality for filtering via  multiple checkboxes in search filter.
 
