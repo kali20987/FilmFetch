@@ -6,6 +6,10 @@ This movie application was created to alleviate the struggles movie enthusiasts 
 
 ![alt text](../captain-planet/Assets/images/Movie%20Info.png)
 
+[alt text](../captain-planet/Assets/images/search.png)
+
+<img width="1353" alt="Screenshot 2023-04-19 at 7 23 01 PM" src="https://user-images.githubusercontent.com/128011155/233220303-5a8a55b5-973a-437f-90d1-cdb1c71110d7.png">
+
 ## Installation
 
 https://claxcode.github.io/captain-planet/

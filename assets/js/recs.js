@@ -1,7 +1,11 @@
-var searchInput = document.getElementById("searchMovies");
+var searchInput = document.querySelector("#searchMovies");
 const apiKey = "2a7d4b5715a1c1e68c7c7be6c0b35221";
-var searchBtn = document.getElementById("submit");
+var searchBtn = document.querySelector("#submit");
 const movieURL = "https://api.themoviedb.org/3/discover/movie?api_key=";
+var userFormEl = document.querySelector("#user-form");
+var submitButtonEl = document.querySelector("#submit-button");
+
+console.log('In recs.js, after initializations');
 
 var data = '';
 
@@ -14,7 +18,11 @@ function showCards(data) {
 
 }
 
-searchBtn.addEventListener("click", function (event) {
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+
+var formSubmitHandler = function (event) {
     event.preventDefault();
     var userInput = searchInput.value.toLowerCase();
     if (userInput.length == 0) {
@@ -23,30 +31,31 @@ searchBtn.addEventListener("click", function (event) {
 
 
 
-    fetch(movieURL + apiKey + "&language=en-US&include_adult=false&include_video=false&page=2&with_genres=" + userInput)
+    fetch(movieURL + apiKey + "&language=en-US&include_adult=false&include_video=false&page=1&with_genres=" + userInput)
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
-            console.log(data);
-            cardTitles = document.getElementsByClassName('cardTitle');
-            for (var i = 0; i < 3; i++){
-                cardTitles[i].innerHTML=data.results[i].title;
-            }
-            cardScores = document.getElementsByClassName('cardScore');
-            for (var i = 0; i < 3; i++){
-                cardScores[i].innerHTML= 'Star score = ' +data.results[i].vote_average;
-            }
-            cardImages = document.getElementsByClassName('card-img-top');
-            for (var i = 0; i < 3; i++){
-                cardImages[i].src='https://image.tmdb.org/t/p/w500' + data.results[i].poster_path;
-            }
-            cardDescriptions = document.getElementsByClassName('cardDescription');
-            for (var i = 0; i < 3; i++){
-                cardScores[i].innerHTML= data.results[i].overview;
+
+            var n = 0;
+            while (n < 3) {
+                i = getRandomInt(20);
+                cardTitles = document.getElementsByClassName('cardTitle');
+                cardTitles[n].innerHTML = data.results[i].title;
+                cardScores = document.getElementsByClassName('cardScore');
+                cardScores[n].innerHTML = 'Star score = ' + data.results[i].vote_average;
+                cardImages = document.getElementsByClassName('card-img-top');
+                cardImages[n].src = 'https://image.tmdb.org/t/p/w500' + data.results[i].poster_path;
+                cardDescriptions = document.getElementsByClassName('cardDescription');
+                cardScores[n].innerHTML = data.results[i].overview;
+
+                n++;
             }
 
-            
-            }
-    )
-})
+        }
+        )
+}
+
+
+submitButtonEl.addEventListener("click", formSubmitHandler);
+
