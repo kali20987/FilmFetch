@@ -146,18 +146,18 @@ nextBtn.addEventListener('click', function () {
 
 
 // Lines below add functionality for filtering via  multiple checkboxes in search filter.
-
+// Executes an if/else conditional that is initiated when the checkbox of the corresponding variable is clicked.
 checkAction.addEventListener('change', function () {
     if (this.checked) {
-        genreInputs.push(checkAction.value);
+        genreInputs.push(checkAction.value); // Adds the associated value of the genre, and then pushes said value to the genreInputs variable.
     } else {
-        for (var i = 0; i < genreInputs.length; i++) {
+        for (var i = 0; i < genreInputs.length; i++) { //else statement executes a for loop which compares the length of the genreInputs value and splices the associated genre value if the checkbox is unclicked.
             if (genreInputs[i] === checkAction.value) {
                 genreInputs.splice(i, checkAction.value);
             }
         }
     }
-    renderCards();
+    renderCards(); //Calls the renderCards function, causing the updated search results to be displayed in real-time, based on the selected genre filters.
 });
 
 checkAdventure.addEventListener('change', function () {
@@ -388,7 +388,7 @@ checkWestern.addEventListener('change', function () {
         for (var i = 0; i < genreInputs.length; i++) {
             if (genreInputs[i] === checkWestern.value) {
                 genreInputs.splice(i, checkWestern.value);
-            }
+            }   
         }
     }
     renderCards();
