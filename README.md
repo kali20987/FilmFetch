@@ -4,7 +4,8 @@
 
 This movie application was created to alleviate the struggles movie enthusiasts go through when deciding on the perfect movie to watch. It contains HTML, CSS, JavaScript, Bootstrap, and jQuery. 
 
-<img width="1353" alt="Screenshot 2023-04-19 at 7 23 01 PM" src="https://user-images.githubusercontent.com/128011155/233220303-5a8a55b5-973a-437f-90d1-cdb1c71110d7.png">
+<img width="1341" alt="Screenshot 2023-04-20 at 7 34 13 PM" src="https://user-images.githubusercontent.com/128011155/233507998-c589d7b5-d71e-4d6a-9e90-50713d46b921.png">
+
 
 ## Installation
 

@@ -59,10 +59,10 @@ footer {
   text-align: center;
   padding: 5px;
   color: orange;
-  position: absolute;
   bottom: 0%;
   width: 100%;
   background-color: rgb(36, 36, 36);
   font-style: italic;
   font-size: large;
+  margin-top: 505px;
 }
