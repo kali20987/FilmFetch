@@ -22,4 +22,4 @@ To use this movie application, you must navigate to the search bar and enter a g
 - themoviedb: https://api.themoviedb.org
 - movieglu: developer.movieglu.com
 
-Deployed [link](https://claxcode.github.io/captain-planet/)
+Deployed [link](https://kali20987.github.io/FilmFetch/)
